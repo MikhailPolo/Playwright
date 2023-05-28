@@ -41,6 +41,7 @@ test.describe('Negative test', () => {
         await page.getByRole('link', { name: 'Войти' }).click();
         await page.getByTestId('login-submit-btn').click();
         await expect(page.getByText('Обязательное поле').first()).toHaveText('Обязательное поле');
+        await expect(page.getByText('Обязательное поле').nth(1)).toHaveText('Обязательное поле');
     });
 });
 
